@@ -4,7 +4,7 @@
 #include <clib/intuition_protos.h>
 #include <stdlib.h>
 
-#define INTUITION_REV 0
+#define INTUITION_REV 34
 #define MILLION 1000000
 
 struct Library *IntuitionBase;

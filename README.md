@@ -1,3 +1,25 @@
+# Updated dockerfile to build for kickstarter 1.3
+
+to build the docker image, use buildImage.sh
+to build your code, run the build.sh
+
+You will need the NDK 1.3 to be able to build to 1.3 Kickstarter, what need to be put in the ndk_1.3 folder.
+Multiple versions of the NDK is available on the Amiga Developer CD 1.2
+
+
+You can run the build environment with the run.sh script, but it's not needed, since the build.sh will take care of it just fine.
+
+
+Here are some useful links:
+VBCC compiler - http://sun.hasenbraten.de/vbcc/index.php?view=main
+Amiga C tutorial - http://www.pjhutchison.org/tutorial/amiga_c.html
+Amiga books - https://amigasourcepres.gitlab.io/page/books/booklist/
+
+
+
+Original readme:
+
+
 # DockerAmigaVbcc
 Docker image for Amiga Vbbc compiler
 
@@ -35,7 +57,3 @@ docker run -v $HOME/myamigacprogram:/data --rm -w /data  ozzyboshi/dockeramigavb
    
 You should now see the binary executable inside your myamigacprogram, copy it to a real Amiga or emulator and run it, a simple window should appear on the screen.
 Happy coding & Amiga forever
-
-
-
-  
