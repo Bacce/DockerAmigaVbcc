@@ -38,18 +38,37 @@ Amiga C tutorial - http://www.pjhutchison.org/tutorial/amiga_c.html
 
 Amiga books - https://amigasourcepres.gitlab.io/page/books/booklist/
 
+Thread about amiga game development - http://eab.abime.net/showthread.php?t=100595
+
+Complete Amiga C - https://gitlab.com/amigasourcecodepreservation/complete-amiga-c/-/tree/master/
+lib version 36 (kickstart 2.0)
+
+
 Most of these resources are for a newer kickstart version, lots of features are not exist from those tutorials in 1.3.
 
 So far the best book I found for 1.3 is this:
 
 Amiga C Manual - Anders Bjerin - http://aminet.net/package/dev/c/ACM_PDF
 
-It's written when the lib version was 34
+It's written when the lib version was 34 (kickstart 1.3)
 
 Here you can find the example codes from the pdf - http://aminet.net/dev/c/ACM.lha
 
 I also added the lha's to this repo.
 
+TODO: 
+- The manual is written with Lattice C 5.0 in mind. I need to figure out how to build the code to get into the chip ram. PDF 1 - page 57
+
+If you are using Lattice C Compiler V5.0 or higher it is very simple. You only need to place the little word "chip" in front of the data. Eg:
+
+UWORD chip graphics_data[]={ ... };
+
+On the Lattice C Compiler V4.0 you can compile the source with the added command: "-acdb" which will load everything into the Chip Memory. Eg:
+
+lc -acdb -Lm my_program.c
+
+So far the most likely option is to change the UWORD chip to AllocMem(128,MEMF_CHIP)
+See the book page 30.
 
 ---------------------------------------------------------------
 
